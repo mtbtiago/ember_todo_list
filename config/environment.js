@@ -4,6 +4,30 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'todolist',
     environment: environment,
+
+    // firebase config BEGIN
+    firebase: {
+      apiKey: "AIzaSyCwq0y_L9btGv_oLyQfoVu-KUzAOcNWeng",
+      authDomain: "todolist-ae67b.firebaseapp.com",
+      databaseURL: "https://todolist-ae67b.firebaseio.com",
+      storageBucket: "todolist-ae67b.appspot.com",
+    },
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com http://api.github.com"
+    },
+    // you also need to relax access to database, creating a rule in https://console.firebase.google.com/project/mycars-e9580/database/rules
+    // {
+    //   "rules": {
+    //     ".read": true,
+    //     ".write": true
+    //   }
+    // }
+
+    // firebase config END
+
+
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
