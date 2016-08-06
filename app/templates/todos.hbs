@@ -3,12 +3,20 @@
     {{#link-to 'todos.new' class="btn btn-success"}}
       Create ToDo
     {{/link-to}}
+
+    <hr>
+
+    {{outlet}}
   </div>
 
-  <hr>
-
-  {{outlet}}
   <div class="col-md-8">
-    
+    {{#each model as |todo|}}
+      <div class="well">
+        <h4>
+          {{todo.title}} <span class="label label-primary pull-right">{{format-date todo.date}}</span>
+        </h4>
+        {{todo.body}}
+      </div>
+    {{/each}}
   </div>
 </div>
