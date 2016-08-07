@@ -5,7 +5,7 @@
   </div>
   <div class="form-group">
     <label>Due Date</label>
-    {{input type="date" class="form-control" value=model.date}}
+    {{bootstrap-datepicker class="form-control" value=model.date todayHighlight=true autoclose=true weekStart=1}}
   </div>
   <div class="form-group">
     <label>Body</label>
