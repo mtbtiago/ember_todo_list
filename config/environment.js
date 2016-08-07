@@ -7,7 +7,7 @@ module.exports = function(environment) {
 
     // firebase config BEGIN
     firebase: {
-      apiKey: " // hidden // ",
+      apiKey: "AIzaSyCwq0y_L9btGv_oLyQfoVu-KUzAOcNWeng",
       authDomain: "todolist-ae67b.firebaseapp.com",
       databaseURL: "https://todolist-ae67b.firebaseio.com",
       storageBucket: "todolist-ae67b.appspot.com",

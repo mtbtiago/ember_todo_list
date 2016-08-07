@@ -26,7 +26,7 @@
       {{#each filteredTodos as |todo|}}
       <div class="well">
         <h4>
-          {{todo.title}} <span class="label label-{{get-date-class todo.date}} pull-right">{{format-date todo.date}}</span>
+          {{#link-to 'todos.edit' todo.id}}{{todo.title}}{{/link-to}} <span class="label label-{{get-date-class todo.date}} pull-right">{{format-date todo.date}}</span>
         </h4> {{todo.body}}
       </div>
       {{/each}}
@@ -34,7 +34,7 @@
       {{#each sortedTodos as |todo|}}
       <div class="well">
         <h4>
-          {{todo.title}} <span class="label label-{{get-date-class todo.date}} pull-right">{{format-date todo.date}}</span>
+          {{#link-to 'todos.edit' todo.id}}{{todo.title}}{{/link-to}} <span class="label label-{{get-date-class todo.date}} pull-right">{{format-date todo.date}}</span>
         </h4> {{todo.body}}
       </div>
       {{/each}}
