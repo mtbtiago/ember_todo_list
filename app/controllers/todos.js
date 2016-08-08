@@ -1,4 +1,5 @@
 import Ember from 'ember';
+/* globals $ */
 
 export default Ember.Controller.extend({
   filter: '',
@@ -12,5 +13,11 @@ export default Ember.Controller.extend({
     });
   }.property('arrangedContent', 'filter'),
   sortedProperties: ['date:asc'],
-  sortedTodos: Ember.computed.sort('model', 'sortedProperties')
+  sortedTodos: Ember.computed.sort('model', 'sortedProperties'),
+  actions: {
+    clearSearch: function() {
+      this.set('filter', '');
+      $('#search').focus();
+    }
+  }
 });
