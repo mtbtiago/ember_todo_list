@@ -9,5 +9,9 @@
     <span class="label label-{{get-date-class todo.date}} pull-right">{{format-date todo.date}}</span>
   </h4>
   {{format-markdown todo.body}}
-  <button {{action 'markAsCompleted' todo}} class='btn btn-default'>Mark as completed</button>
+  {{#if todo.completed}}
+    <button {{action 'toggleCompleted' todo}} class='btn btn-warning btn-sm'>Toggle completion</button>
+  {{else}}
+    <button {{action 'toggleCompleted' todo}} class='btn btn-success btn-sm'>Toggle completion</button>
+  {{/if}}
 </div>
