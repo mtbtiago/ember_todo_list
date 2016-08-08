@@ -1,7 +1,13 @@
 <div class="well">
   <h4>
+    {{#if todo.completed}}
+      <span class="label label-success" style="margin-right: 16px;">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+      </span>
+    {{/if}}
     {{#link-to 'todos.edit' todo.id}}{{todo.title}}{{/link-to}}
     <span class="label label-{{get-date-class todo.date}} pull-right">{{format-date todo.date}}</span>
   </h4>
   {{format-markdown todo.body}}
+  <button {{action 'markAsCompleted' todo}} class='btn btn-default'>Mark as completed</button>
 </div>

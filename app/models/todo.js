@@ -6,5 +6,13 @@ export default DS.Model.extend({
   date: DS.attr('date'),
   created_at: DS.attr('date', function() {
     return new Date();
-  })
+  }),
+  completed: DS.attr('boolean'),
+
+  actions: {
+    markAsCompleted: function() {
+      this.set('completed', true); // locallly
+      this.save(); // remote db
+    }
+  }
 });

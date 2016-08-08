@@ -6,11 +6,13 @@ export default Ember.Controller.extend({
       var date = this.get('date');
       var title = this.get('title');
       var body = this.get('body');
+      // var completed = this.get('completed'); // field not present
 
       var newTodo = this.store.createRecord('todo', {
         title: title,
-        date: new Date(date),
-        body: body
+        body: body,
+        // completed: completed, // field not present
+        date: new Date(date)
       });
 
       newTodo.save();
@@ -19,7 +21,8 @@ export default Ember.Controller.extend({
       this.setProperties({
         title: '',
         body: '',
-        date: ''
+        date: '',
+        completed: false
       });
     }
   }
