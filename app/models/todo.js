@@ -7,12 +7,5 @@ export default DS.Model.extend({
   created_at: DS.attr('date', function() {
     return new Date();
   }),
-  completed: DS.attr('boolean'),
-
-  actions: {
-    markAsCompleted: function() {
-      this.set('completed', true); // locallly
-      this.save(); // remote db
-    }
-  }
+  completed: DS.attr('boolean')
 });
