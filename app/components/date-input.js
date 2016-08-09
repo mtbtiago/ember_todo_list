@@ -3,7 +3,7 @@ import Ember from 'ember';
 
 export default Ember.TextField.extend({
   format: 'DD.MM.YYYY',
-  date: function(key, date) {
+  date: (key, date) => {
     var format = this.get('format');
     if (date) {
       this.set('value', moment(date).format(format));

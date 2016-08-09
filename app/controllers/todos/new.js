@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    addTodo: function() {
+    addTodo: () => {
       var date = this.get('date');
       var title = this.get('title');
       var body = this.get('body');

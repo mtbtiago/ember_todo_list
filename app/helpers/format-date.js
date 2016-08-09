@@ -11,7 +11,7 @@ export default Ember.Helper.extend({
     if (Math.ceil(timeDiff / (1000 * 3600 * 24)) > 2) {
       return moment(params[0]).format('DD/MM/YYYY');
     } else {
-      return moment(params[0]).fromNow();
+      return `When: ${moment(params[0]).fromNow()}`;
     }
   }
 });
